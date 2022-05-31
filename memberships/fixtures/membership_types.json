@@ -1,0 +1,12 @@
+[{
+    "pk": 1,
+    "model": "membership_types.membership_type",
+    "fields": {
+        "name": "3 Month Membership",
+        "description": "Website membership lasting 3 months",
+        "price": 30.00,
+        "category": 1,
+        "image_url": "media/kettlebell_swing.jpg",
+        "image": "kettlebell_swing.jpg"
+    }
+}, ]
