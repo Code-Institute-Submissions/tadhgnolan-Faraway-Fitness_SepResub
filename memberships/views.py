@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Membership_type
+from .models import MembershipType
 
 # Create your views here.
 
@@ -10,4 +10,4 @@ from .models import Membership_type
 
     return render(request=request, 
                   template_name='memberships/member.html',
-                  context=['members':Membership_type.objects.all]) """
+                  context=['members':MembershipType.objects.all]) """

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Membership_type
+from .models import MembershipType
 
 # Register your models here.
-admin.site.register(Membership_type)
+admin.site.register(MembershipType)
