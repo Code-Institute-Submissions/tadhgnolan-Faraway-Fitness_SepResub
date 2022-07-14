@@ -56,6 +56,10 @@ body {
     border: 1px solid black !important;
 }
 
+#alerts {
+    margin-top: 6em;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
