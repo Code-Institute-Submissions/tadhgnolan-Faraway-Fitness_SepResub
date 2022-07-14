@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container h-100">
+    <div class="row h100">
+        <div class="col-7 col-md-6 my-auto">
+            <h1 class="display-4 logo-font text-black">
+                Memberships
+            </h1>
+        </div>
+    </div>
+    {% if request.user.is_superuser %}
+    <div class="row">
+        <div class="col-12">
+            <a href="{% url 'add_membership' %}" class="btn btn-black">Add New</a>
+        </div>
+    </div>
+    {% endif %}
+    <div class="row">
+        <div class="col-12">
+            {% for membership in memberships %}
+            {{membership.title}}
+            <br>
+            {{membership.duration}}
+            <br>
+            {% if request.user.is_superuser %}
+            <a href="{% url 'edit_membership' membership.id %}" class="btn btn-black">Edit</a>
+            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#modal-{{membership.id}}">Delete</a>
+            <!-- Delete Modal -->
+            <div class="modal fade" id="modal-{{membership.id}}" tabindex="-1"
+                aria-labelledby="modal-{{membership.id}}-Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-{{membership.id}}-Label">Delete Membership</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete this membership?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                            <a href="{% url 'delete_membership' membership.id %}" class="btn btn-danger">Yes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            <br>
+            <br>
+            <hr>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

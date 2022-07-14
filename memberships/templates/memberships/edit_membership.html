@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container h-100">
+    <div class="row h100">
+        <div class="col-7 col-md-6 my-auto">
+            <h1 class="display-4 logo-font text-black">
+                Edit Membership
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form action="{% url 'edit_membership' membership.id %}" method="post">
+                {% csrf_token %}
+                {{membership_form.as_p}}
+                <button class="btn btn-black">Edit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
