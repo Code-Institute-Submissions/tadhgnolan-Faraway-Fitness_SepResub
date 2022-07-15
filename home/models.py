@@ -8,7 +8,8 @@ class Welcome(models.Model):
     def __str__(self):
         return self.welcome_title
 
-    def get_random():
-        return Welcome.objects.order_by("?").first()
+    #def get_random():
+        #return Welcome.objects.order_by("?").first()
+
      
     
