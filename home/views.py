@@ -8,6 +8,6 @@ from .models import Welcome
 def index(request):
     """ A view to return the index page """
 
-    return render(request=request, 
+    return render(request=request,
                   template_name='home/index.html',
-                  context={'welcomes':Welcome.objects.all})
+                  context={'welcomes': Welcome.objects.all})
