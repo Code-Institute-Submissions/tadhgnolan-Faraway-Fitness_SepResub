@@ -155,17 +155,16 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ## Deployment
 
-### GitHub Pages
+### Using Heroku
 
-The project was deployed to GitHub Pages using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+- Create an account and login to [Heroku](https://id.heroku.com/login)
+- Create a new app, with an appropriate app name and choose a region.
+- In Resources add Heroku Postgres.
+- Within your newly created app go to settings and click Config Vars. Use the DATABASE_URL Value and add it to your env.py file also you need to connect it via settings.py.
+- Create a SECRET_KEY Key and the Value as the desired key.
+- Then go to the Deploy tab next to Deployment Method, click GitHub to connect your account and repository.
+- At the bottom of the page hit deploy branch making sure it is set to main.
+- Also "Enable Automatic Deploys" can be clicked to keep the app up to date with your Github repository.
 
 ### Forking the GitHub Repository
 
@@ -205,7 +204,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code
 
--  
+-  Code from the Code Institute repository Boutique Ado was used alongside custom code.
 
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
@@ -217,12 +216,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
 
-### Media
-
--   All Images were created by the developer.
 
 ### Acknowledgements
 
--   
-
--   
+- My mentor for guidance, great feedback and direction.
+- Code Institute tutors for all their support throughout.
