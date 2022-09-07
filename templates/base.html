@@ -60,8 +60,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="{% url 'memberships' %}" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="{% url 'memberships' %}">
                             <div class="text-center">
                                 <p class="my-0">Memberships</p>
                             </div>
@@ -95,9 +94,9 @@
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                    ${{ grand_total|floatformat:2 }}
+                                    €{{ grand_total|floatformat:2 }}
                                     {% else %}
-                                    $0.00
+                                    €0.00
                                     {% endif %}
                                 </p>
                             </div>
