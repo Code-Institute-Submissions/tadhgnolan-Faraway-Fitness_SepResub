@@ -150,7 +150,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Known Bugs
 
--   
+-  Error on url. [#17](https://github.com/tadhgnolan/Faraway-Fitness/issues/17) 
 -   
 
 ## Deployment
