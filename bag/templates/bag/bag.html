@@ -29,7 +29,6 @@
                         <tr>
                             <th scope="col">Product Info</th>
                             <th scope="col">Price</th>
-                            <th scope="col">Qty</th>
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
@@ -41,20 +40,17 @@
                             <p class="my-0 small text-muted">Duration: {{ item.product.duration }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
-                        </td>
-                        <td class="py-3 w-25">
-                            <p class="my-0">{{ item.quantity }}</p>
+                            <p class="my-0">€{{ item.product.price }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.sub_total }}</p>
+                            <p class="my-0">€{{ item.sub_total }}</p>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
-                            <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                            <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+                            <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                             </p>
                         </td>
                     </tr>
