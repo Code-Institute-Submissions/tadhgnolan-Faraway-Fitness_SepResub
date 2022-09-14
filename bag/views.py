@@ -30,33 +30,32 @@ def add_to_bag(request, membership_id):
     return redirect(redirect_url)
 
 
-def adjust_bag(request, item_id):
+def adjust_bag(request, membership_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
-    product = get_object_or_404(Product, pk=item_id)
+    product = get_object_or_404(Membership, pk=membership_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
 
     if quantity > 0:
-        bag[item_id] = quantity
-        messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+        bag[membership_id] = quantity
+        messages.success(request, f'Updated {product.title} quantity to {bag[membership_id]}')
     else:
-        bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your bag')
+        bag.pop(membership_id)
+        messages.success(request, f'Removed {product.title} from your bag')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
 
-def remove_from_bag(request, item_id):
+def remove_from_bag(request, membership_id):
     """Remove the item from the shopping bag"""
 
     try:
-        product = get_object_or_404(Product, pk=item_id)
-        size = None
+        product = get_object_or_404(Membership, pk=membership_id)
         bag = request.session.get('bag', {})
-        bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your bag')
+        bag.pop(membership_id)
+        messages.success(request, f'Removed {product.title} from your bag')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
