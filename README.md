@@ -152,7 +152,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -  Error on url. [#17](https://github.com/tadhgnolan/Faraway-Fitness/issues/17) 
 -  Name error. [#18](https://github.com/tadhgnolan/Faraway-Fitness/issues/18) 
-
+-  Stripe: clientSecret is not defined [#19](https://github.com/tadhgnolan/Faraway-Fitness/issues/19)
 ## Deployment
 
 ### Using Heroku
