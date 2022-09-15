@@ -141,6 +141,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
         3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
 
+### SEO
+
+![Facebook Page](static/media/seo.png)
+
 ### Further Testing
 
 -   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
