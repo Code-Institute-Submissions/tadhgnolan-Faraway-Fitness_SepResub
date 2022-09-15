@@ -143,7 +143,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### SEO
 
-![Facebook Page](static/media/seo.png)
+![Facebook Page](documentation/seo.png)
 
 ### Further Testing
 
