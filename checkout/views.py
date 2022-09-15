@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.core.mail import send_mail
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -97,6 +98,17 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
+    customer_email = order.email
+    contact_email = settings.DEFAULT_FROM_EMAIL
+    subject = "Faraway Fitness Order Confirmation"
+    body = (
+        "Thank you for joining Faraway Fitness.\n"
+        "Please find your order details below.\n\n"
+        f"Order Number: {order.order_number}\n"
+        f"Grand Total: {order.grand_total}\n"
+        f"Purchased: {order.date}\n"
+    )
+    send_mail(subject, body, contact_email, [customer_email])
     if 'bag' in request.session:
         del request.session['bag']
 
