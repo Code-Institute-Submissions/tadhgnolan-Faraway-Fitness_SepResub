@@ -11,6 +11,12 @@ body {
     padding-top: 300px;
 }
 
+footer {
+    z-index: 100;
+}
+
+.page-footer {}
+
 /* from Bulma */
 .icon {
     align-items: center;
