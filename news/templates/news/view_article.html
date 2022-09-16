@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Template for page providing full details of each article when selected -->
+<div class="container">
+
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-12">
+            <!-- List of article details -->
+            <div class="card shadow my-3 mx-2 p-3">
+                <h6>Author:</h6>{{article.user}}
+                <hr>
+                <br>
+                <h6>Headline:</h6>{{article.headline}}
+                <hr>
+                <br>
+                <h6>Topic:</h6>{{article.topic}}
+                <hr>
+                <br>
+                <h6>Date Published:</h6>{{article.date}}
+                <hr>
+                <br>
+                <h6>Content:</h6>
+                <p>{{article.content}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
