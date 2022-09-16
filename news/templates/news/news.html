@@ -3,18 +3,10 @@
 
 <!-- Template for page listing all news articles and basic details -->
 <div class="container">
-    <!-- Checks if user is admin / superuser before allowing them to post under their username -->
-    {% if request.user.is_superuser %}
-    <div class="row">
-        <div class="col-12 text-center mx-auto">
-            <a href="{% url 'add_article' %}" class="btn btn-success">Add Article</a>
-        </div>
-    </div>
-    {% endif %}
     <div class="row">
         <!-- List all posts. Can be viewed by any user -->
         {% for article in articles %}
-        <div class="col-12 col-md-12 col-lg-3 my-5">
+        <div class="col-12 col-md-12 col-lg-12 my-5">
             <div class="card shadow my-3 mx-2 p-3">
                 <h6>Author:</h6>{{article.user}}
                 <hr>
@@ -34,6 +26,23 @@
 
                 <a href="{% url 'view_article' article.id %}" class="btn btn-success">View Article</a>
             </div>
+            <!-- Checks if user is admin / superuser before allowing them to post article under their username -->
+            {% if request.user.is_superuser %}
+            <div class="row">
+                <div class="col-12 text-center mx-auto">
+                    <a href="{% url 'add_article' %}" class="btn btn-success">Add Article</a>
+                </div>
+            </div>
+            {% endif %}
+            <!-- Checks if user is superuser before allowing them to procede if true -->
+            {% if request.user.is_superuser %}
+            <div class="row">
+                <div class="col-12 text-center mx-auto mt-2">
+                    <a href="{% url 'delete_article' article.id %}" class="btn btn-danger">Delete
+                        {{article}}</a>
+                </div>
+            </div>
+            {% endif %}
         </div>
         {% endfor %}
 
