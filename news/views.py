@@ -18,7 +18,7 @@ def get_articles(request):
 # Renders full article details on article details page
 def view_article(request, id):
     article = get_object_or_404(Article, id=id)
-    template = "news/article_details.html"
+    template = "news/view_article.html"
     context = {
         "article": article,
     }
