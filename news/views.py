@@ -8,7 +8,7 @@ from .forms import ArticleForm, TopicForm
 # Retrieves article information for display on news page
 def get_articles(request):
     articles = Article.objects.all()
-    template = "news/articles.html"
+    template = "news/news.html"
     context = {
         "articles": articles,
     }
