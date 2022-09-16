@@ -27,6 +27,14 @@
                 <p>{{article.content}}</p>
             </div>
         </div>
+        <!-- Checks if user is admin / superuser before allowing them update article -->
+        {% if request.user.is_superuser %}
+        <div class="row">
+            <div class="col-12 text-center mx-auto">
+                <a href="{% url 'update_article' article.id %}" class="btn btn-success">Update</a>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </div>
 
