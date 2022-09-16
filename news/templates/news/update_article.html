@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Template for page allowing users to update article headline, topic or content -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow my-3 mx-2 p-3">
+                <h2>Update Post</h2>
+                <form action="{% url 'update_article' article.id %}" method="post">
+                    {% csrf_token %}
+
+                    {{form.as_p}}
+                    <div class="row">
+                        <div class="col-12 text-center mx-auto">
+                            <button type="submit" class="btn btn-success">Update Post</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
