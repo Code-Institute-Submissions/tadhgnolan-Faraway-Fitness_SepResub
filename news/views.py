@@ -40,7 +40,7 @@ def add_article(request):
             return redirect(reverse("news"))
         messages.error(request, "Error. Please try again")
 
-    template = "news/add_article"
+    template = "news/add_article.html"
     context = {
         "form": form,
     }
