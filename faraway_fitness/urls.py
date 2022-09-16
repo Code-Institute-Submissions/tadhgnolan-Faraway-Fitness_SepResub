@@ -29,4 +29,4 @@ urlpatterns = [
     path('news/', include('news.urls'), name='news-urls')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'boutique_ado.views.handler404'
+handler404 = 'faraway_fitness.views.handler404'
