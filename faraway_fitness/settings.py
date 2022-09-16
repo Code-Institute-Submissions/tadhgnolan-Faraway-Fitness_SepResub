@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["localhost", "faraway-fitness.herokuapp.com"]
+X_FRAME_OPTIONS = "SAMEORIGIN"
 
 
 # Application definition
