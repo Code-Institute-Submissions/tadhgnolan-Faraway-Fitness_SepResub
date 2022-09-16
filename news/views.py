@@ -23,3 +23,25 @@ def view_article(request, id):
         "article": article,
     }
     return render(request, template, context)
+
+
+# Checks if user is admin / superuser before allowing them to post
+@login_required
+def add_article(request):
+    if not request.user.is_superuser:
+        messages.error(request, "Invalid user permission")
+        return redirect(reverse("news"))
+    form = ArticleForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            form.instance.user = request.user
+            form.save()
+            messages.success(request, "Article added")
+            return redirect(reverse("news"))
+        messages.error(request, "Error. Please try again")
+
+    template = "news/add_article"
+    context = {
+        "form": form,
+    }
+    return render(request, template, context)
