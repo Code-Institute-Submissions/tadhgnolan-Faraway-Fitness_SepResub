@@ -26,7 +26,8 @@ urlpatterns = [
     path('bag/', include('bag.urls')),
     path('memberships/', include('memberships.urls')),
     path('checkout/', include('checkout.urls')),
-    path('news/', include('news.urls'), name='news-urls')
+    path('news/', include('news.urls'), name='news-urls'),
+    path('profile/', include('profiles.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'faraway_fitness.views.handler404'
