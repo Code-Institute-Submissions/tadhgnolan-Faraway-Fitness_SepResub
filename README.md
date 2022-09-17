@@ -156,7 +156,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -  Stripe: clientSecret is not defined [#19](https://github.com/tadhgnolan/Faraway-Fitness/issues/19)
 -  Unexpected KWARG 'product' [#20](https://github.com/tadhgnolan/Faraway-Fitness/issues/20)
 -  UnboundLocalError at /checkout/ [#21](https://github.com/tadhgnolan/Faraway-Fitness/issues/21)
+-  Uresolved WhiteNoise bug. Unable to deploy [#24](https://github.com/tadhgnolan/Faraway-Fitness/issues/24)
 ## Deployment
+
+Unable to deploy due to WhiteNoise bug.
 
 ### Using Heroku
 
