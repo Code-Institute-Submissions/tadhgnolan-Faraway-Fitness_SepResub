@@ -13,3 +13,12 @@ class Welcome(models.Model):
 
     def get_random():
         return Welcome.objects.order_by("?").first()
+
+
+class Contact(models.Model):
+    email = models.EmailField()
+    subject = models.CharField(max_length=255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email
