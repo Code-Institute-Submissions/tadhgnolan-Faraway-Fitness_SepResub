@@ -1,6 +1,6 @@
 <h1 align="center">Faraway Fitness</h1>
 
-[View the live project here.]()
+[View the live project here.](https://faraway-fitness.herokuapp.com/)
 
 This is the main store website for Faraway Fitness. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for potential students and partners.
 
@@ -37,11 +37,8 @@ This is the main store website for Faraway Fitness. It is designed to be respons
 
 *   ### Wireframes
 
-    -   Home Page Wireframe - [View](https://github.com/)
+    -   Home Page Wireframe - [View](documentation/Faraway_Fitness.pdf)
 
-    -   Mobile Wireframe - [View](https://github.com/)
-
-    -   Contact Us Page Wireframe - [View](https://github.com/)
 
 ## Features
 
