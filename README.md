@@ -157,9 +157,11 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -  Unexpected KWARG 'product' [#20](https://github.com/tadhgnolan/Faraway-Fitness/issues/20)
 -  UnboundLocalError at /checkout/ [#21](https://github.com/tadhgnolan/Faraway-Fitness/issues/21)
 -  Uresolved WhiteNoise bug. Unable to deploy [#24](https://github.com/tadhgnolan/Faraway-Fitness/issues/24)
+-  Background image failed to load. Unable to resolve [#25](https://github.com/tadhgnolan/Faraway-Fitness/issues/25)
 ## Deployment
 
-Unable to deploy due to WhiteNoise bug.
+~~Unable to deploy due to WhiteNoise bug.~~
+Removed WhiteNoise & redeployed with AWS.
 
 ### Using Heroku
 
