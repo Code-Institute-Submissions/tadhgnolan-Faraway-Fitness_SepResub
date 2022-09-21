@@ -13,7 +13,7 @@ from .forms import ContactForm
 def index(request):
     """ A view to return the index page """
 
-    return render(request=request,
+    return render(request,
                   template_name='home/index.html',
                   context={'welcomes': Welcome.objects.all})
 
