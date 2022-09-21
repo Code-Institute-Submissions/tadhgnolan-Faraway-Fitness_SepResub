@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-import mimetypes mimetypes.add_type("text / css", ".css")
+# import mimetypes mimetypes.add_type("text / css", ".css", True)
 if os.path.exists("env.py"):
     import env
 
@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  #os.environ.get("DEBUG", False)
+DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://faraway-fitness.herokuapp.com/', 'localhost']
 
 
 # Application definition
@@ -61,7 +61,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
